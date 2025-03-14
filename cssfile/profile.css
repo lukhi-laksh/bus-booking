@@ -1,0 +1,164 @@
+/* profile.css */
+
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('../image/20.jpg'); /* Ensure the path is correct */
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-attachment: fixed; /* Keep the background fixed during scrolling */
+  background-position: center; /* Center the image */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.usern {
+  text-align: center;
+  margin-top: 20px; /* Space from the top */
+  font-size: 20px;
+  color: #333;
+}
+
+/* Profile Wrapper */
+.profile-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 1000px;
+  background-color: #b0d5b0; /* Slight transparency to see the background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.left-panel {
+  width: 35%;
+  background-color: #b0d5b0;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.btn-upload, .btn-home, .btn-action {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-upload {
+  background-color: #4CAF50;
+  color: #ffffff;
+}
+
+.btn-home {
+  background-color: #2196F3;
+  color: #ffffff;
+}
+
+.btn-action {
+  background-color: #007BFF;
+  color: #ffffff;
+}
+
+.btn-action.delete-btn {
+  background-color: #DC3545;
+}
+
+.btn-upload:hover, .btn-home:hover, .btn-action:hover {
+  opacity: 0.8;
+}
+
+.right-panel {
+  width: 65%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #444;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 15px 0;
+}
+
+.account-info {
+  background-color: #ffeb6b;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.account-info p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #666;
+}
+
+.account-info strong {
+  color: #333;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.btn-action {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-action:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-wrapper {
+      flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+      width: 100%;
+  }
+}

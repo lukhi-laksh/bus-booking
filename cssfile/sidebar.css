@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancle {
+  position: absolute;
+  cursor: pointer;
+  background-image: url(../image/menu.png);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 0;
+  padding: 12px;
+  width: 20px;  
+  height: 20px; 
+}
+
+#cancle {
+  z-index: 1111;
+  left: -195px;
+  top: 25px;
+  font-size: 0; 
+  padding: 10px;
+  background-image: url(../image/cancel.png);
+  width: 20px;  
+  height: 20px; 
+}
+
+
+#check:checked ~ .sidebar {
+  left: 0;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancle {
+  left: 245px;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(135deg, #021B2B, #04334b);
+  transition: all 0.5s ease;
+  padding-top: 30px;
+}
+
+.sidebar header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 3px solid #00D4FF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar header {
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  background: #063146;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+.sidebar ul a {
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  font-size: 18px;
+  color: #fff;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sidebar ul a:hover {
+  background: #007BFF;
+  padding-left: 50px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links i {
+  padding: 12px;
+  margin: 0 8px;
+  background: #04334b;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.social-links i:hover {
+  background: #1492d1;
+}
+
+.sidebar header p {
+  margin-top: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}

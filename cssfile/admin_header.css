@@ -1,0 +1,39 @@
+body {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+      
+      .navbar {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+      }
+      
+      .sidebar {
+        background-color: #343a40;
+        color: white;
+      }
+      
+      .nav-sidebar .nav-item .nav-link {
+        color: #c2c7d0;
+      }
+      
+      .nav-sidebar .nav-item .nav-link.active {
+        background-color: #4b545c;
+      }
+      
+      .content-wrapper {
+        background-color: #f4f6f9;
+        padding: 20px;
+      }
+      
+      .footer {
+        background-color: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+        text-align: center;
+        padding: 15px 0;
+      }
+      
+      h1 {
+        color: #343a40;
+        font-size: 24px;
+      }
+      

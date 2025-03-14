@@ -1,0 +1,31 @@
+body {
+  background-image: url(../image/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.home_details {
+  color: #fff;
+  font-family: inherit;
+  font-size: 74px;
+  padding: 162px 5px 5px 185px;
+}
+.font {
+  color: #f9522e;
+}
+.btnHome {
+  font-family: inherit;
+  background-color: #f9522e;
+  padding: 13px 44px 13px 44px;
+  font-size: 18px;
+  border-style: none;
+  position: relative;
+  z-index: 10;
+  margin-left: 180px;
+  margin-top: 25px;
+  margin-bottom: 300px;
+}
+.btnHome:hover {
+  background-color: orange;
+  cursor: pointer;
+}

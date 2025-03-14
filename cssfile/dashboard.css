@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #333;
+}
+
+.dashboard-header {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-title {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.dashboard-breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+
+.dashboard-breadcrumb li {
+  margin-left: 10px;
+}
+
+.dashboard-breadcrumb li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.dashboard-breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.dashboard-col-3 {
+  flex: 1;
+  max-width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.dashboard-clear {
+  clear: both;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.info-card-image {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 10px;
+  background-color: rgb(80, 80, 226);
+}
+
+.info-card-icon {
+  width: 60px; /* Fixed width */
+  height: 60px; /* Fixed height */
+  line-height: 60px; /* Center icon vertically */
+  font-size: 30px; /* Adjust icon size */
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #fff; /* Icon color */
+  background-color: #007bff; /* Default background color */
+}
+
+/* Different background colors for info cards */
+.info-bg-primary {
+  background-color: #007bff;
+}
+
+.info-bg-danger {
+  background-color: #dc3545;
+}
+
+.info-bg-success {
+  background-color: #28a745;
+}
+
+.info-bg-warning {
+  background-color: #ffc107;
+}
+
+.info-card-content {
+  color: #333;
+  margin-top: 60px; /* Adjust to ensure text is not covered by the image */
+}
+
+.info-card-label {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.info-card-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Professional Hover Effect */
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .dashboard-col-3 {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-col-3 {
+    max-width: 100%;
+  }
+}
+
+#first{
+  background-color: rgb(226, 80, 80);
+}
+
+#third {
+  background-color: #50e2a4;
+}
+
+#fourth{
+  background-color: #e57f5b;
+}
