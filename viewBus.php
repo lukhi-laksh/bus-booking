@@ -1,13 +1,13 @@
 <?php 
 session_start();
 
-include("connection.php");
-include("function.php");
+require_once("connection.php");
+require_once("function.php");
 
 $user_data = check_login($conn);
 ?>
 
-<?php include("connection.php") ?>
+<?php require_once("connection.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,8 +24,8 @@ $user_data = check_login($conn);
     <h1 class="adminTopic">Booking Your Ticket...</h1>
 
     <?php
-      $sqlget = "SELECT * FROM route";
-      $sqldata = mysqli_query($conn, $sqlget) or die('Error getting data');
+      $query = "SELECT * FROM route";
+      $result = mysqli_query($conn, $query) or die('Error retrieving data');
 
       echo "<table>";
       echo "<tr>
@@ -38,26 +38,25 @@ $user_data = check_login($conn);
               <th>Booking</th>
             </tr>";
 
-      while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
-        echo "<td>" . $row['via_city'] . "</td>";
-        echo "<td>" . $row['destination'] . "</td>";
-        echo "<td>" . $row['bus_name'] . "</td>";
-        echo "<td>" . $row['departure_date'] . "</td>";
-        echo "<td>" . $row['departure_time'] . "</td>";
-        echo "<td>" . $row['cost'] . "</td>";
+      while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr>";
+        echo "<td>{$row['via_city']}</td>";
+        echo "<td>{$row['destination']}</td>";
+        echo "<td>{$row['bus_name']}</td>";
+        echo "<td>{$row['departure_date']}</td>";
+        echo "<td>{$row['departure_time']}</td>";
+        echo "<td>{$row['cost']}</td>";
     ?>
         <td>
           <button style="border: 2px solid yellow; border-radius: 7px; background-color: red; color: white;">
-            <a href="Login.php?id=<?php echo $row['id']; ?>">Book Now</a>
+            <a href="Login.php?id=<?php echo $row['id']; ?>" style="color: white; text-decoration: none;">Book Now</a>
           </button>
         </td>
       </tr>
     <?php
       }
-
       echo "</table>";
     ?>
   </div>
-
 </body>
 </html>
