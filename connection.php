@@ -1,16 +1,16 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "busBus";
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "busBus";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+if(!$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
+{
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+	die("failed to connect!");
 }
-
+else{
+	
+}
 ?>
