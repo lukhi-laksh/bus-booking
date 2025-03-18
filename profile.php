@@ -20,7 +20,7 @@ $user_data = check_login($conn);
 
     <!-- User Greeting -->
     <div class="usern">
-        <h2>Hello !!! <?php echo $user_data['username']; ?></h2>
+        <h2>Welcom <?php echo $user_data['username']; ?></h2>
     </div>
 
     <div class="profile-wrapper">
